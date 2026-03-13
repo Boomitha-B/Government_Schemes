@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheme Detail | GovSchemes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="index.html" class="logo">GovSchemes</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="central-schemes.html">Central Schemes</a></li>
+                    <li><a href="state-schemes.html">State Schemes</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="detail-header bg-alt">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="central-schemes.html">Schemes</a> / <span
+                        id="schemeBreadcrumb">Detail</span>
+                </nav>
+                <h1 id="schemeName">Scheme Name</h1>
+                <div class="meta-tags">
+                    <span class="tag" id="schemeCategoryTag">Category</span>
+                    <span class="tag">Central Government</span>
+                    <span class="tag">Verified Information</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="detail-layout">
+                    <div class="detail-main">
+                        <div class="detail-section">
+                            <h2>Overview</h2>
+                            <p id="schemeOverview">Loading scheme information...</p>
+                        </div>
+
+                        <div class="detail-section content-card">
+                            <h2>Key Benefits</h2>
+                            <ul class="checklist" id="schemeBenefits">
+                                <!-- Dynamic -->
+                            </ul>
+                        </div>
+
+                        <div class="detail-section">
+                            <h2>Eligibility Criteria</h2>
+                            <div class="eligibility-box" id="schemeEligibility">
+                                <!-- Dynamic -->
+                            </div>
+                        </div>
+
+                        <div class="detail-section">
+                            <h2>Documents Required</h2>
+                            <ul class="checklist" id="schemeDocuments">
+                                <li>Aadhaar Card</li>
+                                <li>Address Proof</li>
+                                <li>Income Certificate (if applicable)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <aside class="detail-sidebar">
+                        <div class="action-card">
+                            <h3>Apply Now</h3>
+                            <p>Official application process is handled through the government portal.</p>
+                            <a href="#" target="_blank" class="btn btn-secondary btn-full" id="officialSiteBtn">Visit
+                                Official Website</a>
+                            <p class="source-hint">You will be redirected to an official .gov.in or .nic.in website.</p>
+                        </div>
+
+                        <div class="verification-badge">
+                            <span class="icon">🛡️</span> Last updated: January 2026
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 GovSchemes Awareness Portal.</p>
+        </div>
+    </footer>
+
+    <script>
+        // In a real app, this would be fetched from a JSON file.
+        // For this static prototype, we handle multiple "pages" with one physical file (or clone it).
+        // Since I'm creating multiple files, I'll bake the data into each for simplicity and SEO.
+        const schemeId = window.location.pathname.split('/').pop().replace('-detail.html', '');
+
+        // This script is a template. I will replace the data below when writing each file.
+        const schemeData = {
+            "scholarship": {
+                name: "National Scholarship Portal (NSP)",
+                cat: "Education",
+                overview: "A one-stop solution for various scholarship schemes offered by Central and State Governments.",
+                benefits: ["Direct Benefit Transfer (DBT) to bank accounts", "Single application for multiple schemes", "Centralized verification process"],
+                eligibility: "Students from Class 1 to Ph.D. level belonging to SC/ST/OBC/Minority/General categories based on specific scheme rules."
+            },
+            "kanya-sumangala": {
+                name: "Mukhya Mantri Kanyasumangala Yojana",
+                cat: "Women & Child",
+                overview: "An initiative by the UP Government to provide financial security and educational support to girl children.",
+                benefits: ["Total grant of ₹15,000 in 6 stages", "Support from birth to graduation", "Promotes health and education"],
+                eligibility: "Resident of Uttar Pradesh. Maximum 2 daughters per family. Family income less than ₹3 Lakh/year."
+            },
+            "janani": {
+                name: "Janani Suraksha Yojana (JSY)",
+                cat: "Health",
+                overview: "A safe motherhood intervention under the National Health Mission (NHM) to reduce maternal and neonatal mortality.",
+                benefits: ["Cash incentive for institutional delivery", "Free transport and medicines", "Post-natal care follow-up"],
+                eligibility: "All pregnant women delivering in government health centers, with special focus on Low Performing States (LPS)."
+            },
+            "mission-indradhanush": {
+                name: "Mission Indradhanush",
+                cat: "Health",
+                overview: "A health mission to ensure full immunization with all available vaccines for children up to two years and pregnant women.",
+                benefits: ["Full immunization against 12 vaccine-preventable diseases", "Doorstep vaccination services", "Free of cost at public health centers"],
+                eligibility: "All children under 2 years of age and pregnant women who have remained uncovered under the routine immunization program."
+            },
+            "crop-insurance": {
+                name: "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+                cat: "Agriculture",
+                overview: "A comprehensive insurance program to provide financial support to farmers suffering crop loss/damage arising out of unforeseen events.",
+                benefits: ["Low premium rates for farmers", "Full sum insured coverage", "Prompt claim settlement via technology"],
+                eligibility: "All farmers including sharecroppers and tenant farmers growing notified crops in notified areas are eligible."
+            },
+            "soil-health": {
+                name: "Soil Health Card Scheme",
+                cat: "Agriculture",
+                overview: "Helping farmers understand the nutrient status of their soil and providing recommendations on dosage of nutrients for better crop yield.",
+                benefits: ["Free soil testing", "Personalized fertilizer recommendations", "Reduction in input costs"],
+                eligibility: "All farmers in India can get their soil samples tested every 2 years."
+            },
+            "mgnrega": {
+                name: "MGNREGA (Rural Employment)",
+                cat: "Employment",
+                overview: "The Mahatama Gandhi National Rural Employment Guarantee Act guarantees 100 days of wage employment in a financial year to a rural household.",
+                benefits: ["Legal guarantee of work", "Unemployment allowance if work not provided", "Development of rural infrastructure"],
+                eligibility: "Adult members of any rural household willing to do unskilled manual work."
+            },
+            "skill-india": {
+                name: "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
+                cat: "Employment",
+                overview: "The flagship scheme of the Ministry of Skill Development & Entrepreneurship (MSDE) for skill certification and vocational training.",
+                benefits: ["Industry-relevant skill training", "Monetary rewards upon certification", "Placement assistance"],
+                eligibility: "Any Indian national of age 15-45 years who is currently unemployed or an early school/college dropout."
+            },
+            "mudra": {
+                name: "Pradhan Mantri Mudra Yojana (PMMY)",
+                cat: "Finance",
+                overview: "Providing loans up to ₹10 Lakh to non-corporate, non-farm small/micro enterprises.",
+                benefits: ["No collateral required", "Three categories: Shishu, Kishore, and Tarun", "Low interest rates"],
+                eligibility: "Small manufacturing units, service sector units, shopkeepers, fruits/vegetable vendors, and artisans."
+            }
+        };
+
+        const data = schemeData[schemeId] || { name: "Scheme Detail", cat: "General", overview: "Information coming soon.", benefits: [], eligibility: "Contact local authorities." };
+
+        document.getElementById('schemeName').textContent = data.name;
+        document.getElementById('schemeBreadcrumb').textContent = data.name;
+        document.getElementById('schemeCategoryTag').textContent = data.cat;
+        document.getElementById('schemeOverview').textContent = data.overview;
+        document.getElementById('schemeEligibility').textContent = data.eligibility;
+
+        const benefitsList = document.getElementById('schemeBenefits');
+        data.benefits.forEach(b => {
+            const li = document.createElement('li');
+            li.textContent = b;
+            benefitsList.appendChild(li);
+        });
+
+        document.getElementById('officialSiteBtn').href = "https://india.gov.in"; // Placeholder official link
+    </script>
+</body>
+
+</html>

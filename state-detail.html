@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Schemes | GovSchemes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="index.html" class="logo">GovSchemes</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="central-schemes.html">Central Schemes</a></li>
+                    <li><a href="state-schemes.html" class="active">State Schemes</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section">
+            <div class="container text-center">
+                <h1 id="stateTitle">State Schemes</h1>
+                <p class="hero-subtext">Verified welfare programs for your region.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="schemes-grid" id="stateSchemesContainer">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 GovSchemes Awareness Portal.</p>
+        </div>
+    </footer>
+
+    <script>
+        const stateData = {
+            "andhra": {
+                name: "Andhra Pradesh",
+                schemes: [
+                    { name: "Amma Vodi", cat: "Education", benefit: "₹15,000 for mothers of students", url: "scholarship-detail.html" },
+                    { name: "YSR Asara", cat: "Finance", benefit: "Debt waiver for SHG women", url: "mudra-detail.html" }
+                ]
+            },
+            "assam": {
+                name: "Assam",
+                schemes: [
+                    { name: "Orunodoi Scheme", cat: "Finance", benefit: "₹1,250 monthly for low-income families", url: "placeholder-detail.html" },
+                    { name: "Pragyan Bharti", cat: "Education", benefit: "Free textbooks and Scootys for girl students", url: "scholarship-detail.html" }
+                ]
+            },
+            "bihar": {
+                name: "Bihar",
+                schemes: [
+                    { name: "Mukhyamantri Kanya Utthan Yojana", cat: "Women", benefit: "₹50,000 for graduation", url: "placeholder-detail.html" },
+                    { name: "Student Credit Card Scheme", cat: "Education", benefit: "Up to ₹4 Lakh loan", url: "scholarship-detail.html" }
+                ]
+            },
+            "delhi": {
+                name: "Delhi (NCT)",
+                schemes: [
+                    { name: "Ladli Scheme", cat: "Women", benefit: "Financial aid for girl child", url: "placeholder-detail.html" },
+                    { name: "Chief Minister SC/ST/OBC/Minority Scholarship", cat: "Education", benefit: "Full fees reimbursement", url: "scholarship-detail.html" }
+                ]
+            },
+            "gujarat": {
+                name: "Gujarat",
+                schemes: [
+                    { name: "Vahli Dikri Yojana", cat: "Women", benefit: "₹1.1 Lakh for daughter's education/marriage", url: "placeholder-detail.html" },
+                    { name: "Mukhymantri Amrutum (MA) Yojana", cat: "Health", benefit: "₹5 Lakh health cover", url: "ayushman-detail.html" }
+                ]
+            },
+            "haryana": {
+                name: "Haryana",
+                schemes: [
+                    { name: "Parivahan Suvidha", cat: "Transport", benefit: "Free bus travel for girl students", url: "scholarship-detail.html" },
+                    { name: "Mukhyamantri Antyodaya Parivar Utthan", cat: "Employment", benefit: "Income generation loans", url: "skill-india-detail.html" }
+                ]
+            },
+            "karnataka": {
+                name: "Karnataka",
+                schemes: [
+                    { name: "Gruha Lakshmi", cat: "Women", benefit: "₹2,000 monthly for women head of family", url: "placeholder-detail.html" },
+                    { name: "Yuva Nidhi", cat: "Employment", benefit: "Unemployment allowance for graduates", url: "skill-india-detail.html" }
+                ]
+            },
+            "kerala": {
+                name: "Kerala",
+                schemes: [
+                    { name: "Karunya Health Scheme", cat: "Health", benefit: "Critical illness insurance", url: "ayushman-detail.html" },
+                    { name: "Subhiksha Keralam", cat: "Agriculture", benefit: "Subsidies for self-reliant farming", url: "crop-insurance-detail.html" }
+                ]
+            },
+            "madhya": {
+                name: "Madhya Pradesh",
+                schemes: [
+                    { name: "Laadli Behna Yojana", cat: "Women", benefit: "₹1,250 monthly grant", url: "placeholder-detail.html" },
+                    { name: "CM Medhavi Vidyarthi Yojana", cat: "Education", benefit: "College fees for bright students", url: "scholarship-detail.html" }
+                ]
+            },
+            "maharashtra": {
+                name: "Maharashtra",
+                schemes: [
+                    { name: "Majhi Ladki Bahin Yojana", cat: "Women", benefit: "₹1,500 monthly grant", url: "placeholder-detail.html" },
+                    { name: "Mahatma Phule Jan Arogya Yojana", cat: "Health", benefit: "₹5 Lakh health insurance", url: "ayushman-detail.html" }
+                ]
+            },
+            "odisha": {
+                name: "Odisha",
+                schemes: [
+                    { name: "KALIA Scheme", cat: "Agriculture", benefit: "Income support for small farmers", url: "pm-kisan-detail.html" },
+                    { name: "Biju Swasthya Kalyan Yojana", cat: "Health", benefit: "Smart Health Cards for families", url: "ayushman-detail.html" }
+                ]
+            },
+            "punjab": {
+                name: "Punjab",
+                schemes: [
+                    { name: "Mata Tripta Mahila Yojana", cat: "Women", benefit: "Empowerment for female-headed households", url: "placeholder-detail.html" },
+                    { name: "Punjab Job Helpline", cat: "Employment", benefit: "Direct job placement assistance", url: "skill-india-detail.html" }
+                ]
+            },
+            "rajasthan": {
+                name: "Rajasthan",
+                schemes: [
+                    { name: "Chiranjeevi Health Insurance", cat: "Health", benefit: "₹25 Lakh cover", url: "ayushman-detail.html" },
+                    { name: "Anuprati Coaching Scheme", cat: "Education", benefit: "Free coaching for competitive exams", url: "scholarship-detail.html" }
+                ]
+            },
+            "tamil": {
+                name: "Tamil Nadu",
+                schemes: [
+                    { name: "Pudhumai Penn Scheme", cat: "Education", benefit: "₹1,000 monthly for girl college students", url: "scholarship-detail.html" },
+                    { name: "Makkalai Thedi Maruthuvam", cat: "Health", benefit: "Healthcare at doorstep", url: "ayushman-detail.html" }
+                ]
+            },
+            "telangana": {
+                name: "Telangana",
+                schemes: [
+                    { name: "Rythu Bandhu", cat: "Agriculture", benefit: "₹10,000 per acre per year", url: "pm-kisan-detail.html" },
+                    { name: "Kalyana Lakshmi / Shaadi Mubarak", cat: "Social", benefit: "₹1,00,116 for marriage support", url: "placeholder-detail.html" }
+                ]
+            },
+            "up": {
+                name: "Uttar Pradesh",
+                schemes: [
+                    { name: "Kanya Sumangala Yojana", cat: "Education", benefit: "₹15,000 grant", url: "kanya-sumangala-detail.html" },
+                    { name: "UP Bhagya Laxmi Yojana", cat: "Women", benefit: "₹50,000 bond for girl child", url: "placeholder-detail.html" }
+                ]
+            },
+            "west": {
+                name: "West Bengal",
+                schemes: [
+                    { name: "Kanyashree Prakalpa", cat: "Education", benefit: "Annual scholarship for girl students", url: "scholarship-detail.html" },
+                    { name: "Lakshmir Bhandar", cat: "Women", benefit: "₹1,000 monthly for women", url: "placeholder-detail.html" },
+                    { name: "Swasthya Sathi", cat: "Health", benefit: "₹5 Lakh family health cover", url: "ayushman-detail.html" }
+                ]
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const stateKey = urlParams.get('state');
+        const stateInfo = stateData[stateKey] || { name: "State Schemes", schemes: [] };
+
+        document.getElementById('stateTitle').textContent = `Government Schemes - ${stateInfo.name}`;
+        const container = document.getElementById('stateSchemesContainer');
+
+        if (stateInfo.schemes.length === 0) {
+            container.innerHTML = '<p class="text-center">Scheme information for this state is being updated. Please check back soon.</p>';
+        } else {
+            stateInfo.schemes.forEach(s => {
+                const card = document.createElement('article');
+                card.className = 'scheme-card';
+                card.innerHTML = `
+                    <div class="card-header">
+                        <span class="category-tag">${s.cat}</span>
+                        <h3>${s.name}</h3>
+                    </div>
+                    <ul class="quick-eligibility">
+                        <li><strong>Benefit:</strong> ${s.benefit}</li>
+                    </ul>
+                    <div class="card-footer">
+                        <a href="${s.url}" class="btn btn-primary btn-sm">Read More</a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+    </script>
+</body>
+
+</html>

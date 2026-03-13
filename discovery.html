@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheme Discovery | GovSchemes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="index.html" class="logo">GovSchemes</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="central-schemes.html">Central Schemes</a></li>
+                    <li><a href="state-schemes.html">State Schemes</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-section">
+            <div class="container text-center">
+                <h1>Scheme Discovery Tool</h1>
+                <p class="hero-subtext">Answer 4 simple questions to find schemes you may be eligible for.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="wizard-container academic-readable">
+                    <!-- Step 1 -->
+                    <div class="wizard-step" id="step1">
+                        <h3>Step 1: Where do you live?</h3>
+                        <p>Geography determines which State schemes you can access.</p>
+                        <select id="stateSelect" class="form-input">
+                            <option value="">Select State/UT</option>
+                            <option value="andhra">Andhra Pradesh</option>
+                            <option value="assam">Assam</option>
+                            <option value="bihar">Bihar</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="gujarat">Gujarat</option>
+                            <option value="haryana">Haryana</option>
+                            <option value="karnataka">Karnataka</option>
+                            <option value="kerala">Kerala</option>
+                            <option value="madhya">Madhya Pradesh</option>
+                            <option value="maharashtra">Maharashtra</option>
+                            <option value="odisha">Odisha</option>
+                            <option value="punjab">Punjab</option>
+                            <option value="rajasthan">Rajasthan</option>
+                            <option value="tamil">Tamil Nadu</option>
+                            <option value="telangana">Telangana</option>
+                            <option value="up">Uttar Pradesh</option>
+                            <option value="west">West Bengal</option>
+                        </select>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="wizard-step" id="step2">
+                        <h3>Step 2: What is your primary occupation?</h3>
+                        <p>This helps us filter schemes specifically for your demographic.</p>
+                        <select id="occSelect" class="form-input">
+                            <option value="">Select Occupation</option>
+                            <option value="student">Student</option>
+                            <option value="farmer">Farmer</option>
+                            <option value="worker">Unorganized Worker</option>
+                            <option value="entrepreneur">Self-Employed / Entrepreneur</option>
+                            <option value="senior">Retired / Senior Citizen</option>
+                        </select>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="wizard-step" id="step3">
+                        <h3>Step 3: What are you looking for?</h3>
+                        <p>Select one or more areas of interest.</p>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="need" value="education"> Education &
+                                Scholarships</label>
+                            <label><input type="checkbox" name="need" value="health"> Health & Medical</label>
+                            <label><input type="checkbox" name="need" value="finance"> Financial Grant / Loan</label>
+                        </div>
+                    </div>
+
+                    <div class="wizard-actions text-center">
+                        <button class="btn btn-primary" id="findSchemesBtn">Find Matching Schemes</button>
+                    </div>
+
+                    <!-- Privacy Reminder -->
+                    <div class="privacy-note text-center">
+                        <p><small>ⓘ We do not store your answers. This tool works entirely in your browser.</small></p>
+                    </div>
+                </div>
+
+                <!-- Results Area (Hidden by default) -->
+                <div id="resultsArea" style="display:none; margin-top: 3rem;">
+                    <div class="results-header text-center" style="margin-bottom: 2rem;">
+                        <h2 id="resultsTitle">Potential Matches</h2>
+                        <p id="resultsSubtitle" class="text-muted"></p>
+                    </div>
+                    <div class="schemes-grid" id="resultsGrid">
+                        <!-- JS will inject matches here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 GovSchemes Awareness Portal.</p>
+        </div>
+    </footer>
+
+    <script src="js/discovery.js"></script>
+</body>
+
+</html>
