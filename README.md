@@ -65,25 +65,25 @@ A welcoming landing page introducing the platform and highlighting the importanc
 ### 📋 Schemes Section
 Displays various government schemes along with key details and descriptions.
 
-![Image Name](IMAGE_LINK)
+![Schemes Section](IMAGE_LINK)
 ---
 
 ### 🎓 Education Schemes
 Lists schemes designed to support students through scholarships and educational assistance programs.
 
-![Image Name](IMAGE_LINK)
+![Education_Schemes](IMAGE_LINK)
 ---
 
 ### 🌾 Agriculture Schemes
 Highlights government initiatives aimed at supporting farmers and improving agricultural productivity.
 
-![Image Name](IMAGE_LINK)
+![Agriculture_Schemes](IMAGE_LINK)
 ---
 
 ### 👩‍👧 Social Welfare Schemes
 Information about schemes focused on women empowerment, senior citizens, and economically weaker sections.
 
-![Image Name](IMAGE_LINK)
+![Social_Welfare_Schemes](IMAGE_LINK)
 ---
 
 ## 🛠 Tech Stack
