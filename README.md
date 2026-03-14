@@ -71,7 +71,7 @@ Displays various government schemes along with key details and descriptions.
 ### 🎓 Education Schemes
 Lists schemes designed to support students through scholarships and educational assistance programs.
 
-![Education_Schemes](IMAGE_LINK)
+![Education_Schemes](https://github.com/Boomitha-B/Government_Schemes/blob/621fb11fa0a24bf98ff45f3243dad82e0f6fe8cb/Education_scheme.jpeg)
 ---
 
 ### 🌾 Agriculture Schemes
