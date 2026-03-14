@@ -83,7 +83,7 @@ Highlights government initiatives aimed at supporting farmers and improving agri
 ### 👩‍👧 Social Welfare Schemes
 Information about schemes focused on women empowerment, senior citizens, and economically weaker sections.
 
-![Social_Welfare_Schemes](IMAGE_LINK)
+![Social_Welfare_Schemes](https://github.com/Boomitha-B/Government_Schemes/blob/f0c191682d2a3091cb37649456a13b7f1b1055d6/Health_scheme.jpeg)
 ---
 
 ## 🛠 Tech Stack
