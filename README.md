@@ -59,6 +59,7 @@ The website acts as a centralized hub where users can explore different governme
 ### 🏠 Home
 A welcoming landing page introducing the platform and highlighting the importance of government welfare programs.
 
+![Home_page](https://github.com/Boomitha-B/Government_Schemes/blob/2670ec3da7439bb9d17b5264a37832a02be32aac/Home.png)
 ---
 
 ### 📋 Schemes Section
