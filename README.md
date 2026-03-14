@@ -150,9 +150,7 @@ Color schemes and typography are chosen to create a **professional and trustwort
 For collaborations or inquiries:
 
 - **GitHub**: https://github.com/Boomitha-B
-- **LinkedIn**: ADD_YOUR_LINKEDIN_LINK_HERE
-- **Email**: ADD_YOUR_EMAIL_HERE
-
+- **LinkedIn**: https://www.linkedin.com/in/boomitha-b-948468291/
 ---
 
 © 2026 Government Schemes Portal – Empowering citizens through awareness.
