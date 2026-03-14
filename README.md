@@ -65,7 +65,7 @@ A welcoming landing page introducing the platform and highlighting the importanc
 ### 📋 Schemes Section
 Displays various government schemes along with key details and descriptions.
 
-![Schemes Section](IMAGE_LINK)
+![Schemes Section](https://github.com/Boomitha-B/Government_Schemes/blob/c68aa94a484636b79d933a5d3dfe3d0aab6ad685/schemes_section.jpeg)
 ---
 
 ### 🎓 Education Schemes
