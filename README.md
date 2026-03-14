@@ -77,7 +77,7 @@ Lists schemes designed to support students through scholarships and educational 
 ### 🌾 Agriculture Schemes
 Highlights government initiatives aimed at supporting farmers and improving agricultural productivity.
 
-![Agriculture_Schemes](IMAGE_LINK)
+![Agriculture_Schemes](https://github.com/Boomitha-B/Government_Schemes/blob/40c13c86f340abcbf3df7238320f5742d4edf708/Agri_Scheme.jpeg)
 ---
 
 ### 👩‍👧 Social Welfare Schemes
